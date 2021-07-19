@@ -1,0 +1,24 @@
+name: "Check TFC Workspace Existence"
+description: "Determines existence of a Terraform Cloud workspace"
+inputs:
+  tfcToken:
+    description: A Terraform Cloud API token with access to manage the workspace
+    required: true
+  orgName:
+    description: The name of the Terraform Cloud organization where the workspace resides
+    required: true
+  workspaceName:
+    description: The name of the Terraform Cloud workspace
+    required: true
+runs:
+  using: "docker"
+  image: "docker://frostedcarbon/manage-tfc-workspace-image:latest"
+  args:
+    - workspace
+    - get
+    - -token
+    - ${{ inputs.tfcToken }}
+    - -org
+    - ${{ inputs.orgName }}
+    - -workspace
+    - ${{ inputs.workspaceName }}
