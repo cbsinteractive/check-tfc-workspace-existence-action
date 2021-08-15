@@ -21,6 +21,7 @@ The action generates no outputs. However, the return code will be non-zero if th
 ```yaml
 - name: Check for existing workspace
   id: check-workspace
+  continue-on-error: true
   uses: cbsinteractive/check-tfc-workspace-existence@v1
   with:
     tfcToken: ${{ secrets.tfc_token }}
