@@ -14,14 +14,13 @@ The action expects the following inputs:
 
 ## Outputs
 
-The action generates no outputs.
+The action generates no outputs. However, the return code will be non-zero if the Terraform Cloud workspace does not exist. Use this in conjunction with [continue-on-error][] to achieve the desired workflow logic.
 
 ## Example Usage
 
 ```yaml
 - name: Check for existing workspace
   id: check-workspace
-  continue-on-error: true # Will error if the workspace already exists
   uses: cbsinteractive/check-tfc-workspace-existence@v1
   with:
     tfcToken: ${{ secrets.tfc_token }}
@@ -35,4 +34,5 @@ The action generates no outputs.
 
 This example assumes several variables stored as GitHub [encrypted secrets][].
 
+[continue-on-error]: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepscontinue-on-error
 [encrypted secrets]: https://docs.github.com/en/actions/reference/encrypted-secrets
