@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/cbsinteractive/check-tfc-workspace-existence/compare/1.1.0...1.1.1) (2021-09-28)
+
+
+### Bug Fixes
+
+* Use version of tfc-cli image with CA certs ([ec75409](https://github.com/cbsinteractive/check-tfc-workspace-existence/commit/ec75409d486c0184d07b3b3841bb3404fc3a8943))
+
 # [1.1.0](https://github.com/cbsinteractive/check-tfc-workspace-existence/compare/1.0.0...1.1.0) (2021-09-28)
 
 
