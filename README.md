@@ -1,4 +1,4 @@
-# Check TFC Workspace Existence
+# Check TFC Workspace Existence Action
 
 This action is used to determine if a Terraform Cloud workspace exists.
 
@@ -6,11 +6,11 @@ This action is used to determine if a Terraform Cloud workspace exists.
 
 The action expects the following inputs:
 
-| Variable             | Required | Description                                                                 |
-| -------------------- | -------- | --------------------------------------------------------------------------- |
-| `tfcToken`           | Yes      | A Terraform Cloud API token with access to manage the workspace             |
-| `orgName`            | Yes      | The name of the Terraform Cloud organization in which the workspace resides |
-| `workspaceName`      | Yes      | The name of the Terraform Cloud workspace to manage                         |
+| Variable        | Required | Description                                                                 |
+| --------------- | -------- | --------------------------------------------------------------------------- |
+| `tfcToken`      | Yes      | A Terraform Cloud API token with access to manage the workspace             |
+| `orgName`       | Yes      | The name of the Terraform Cloud organization in which the workspace resides |
+| `workspaceName` | Yes      | The name of the Terraform Cloud workspace                                   |
 
 ## Outputs
 
@@ -20,16 +20,16 @@ The action generates no outputs. However, the return code will be non-zero if th
 
 ```yaml
 - name: Check for existing workspace
-  id: check-workspace
+  id: check-workspace-existence
   continue-on-error: true
-  uses: cbsinteractive/check-tfc-workspace-existence@v1
+  uses: cbsinteractive/check-tfc-workspace-existence-action@v1
   with:
     tfcToken: ${{ secrets.tfc_token }}
     orgName: ${{ secrets.tfc_organization }}
     workspaceName: some-workspace-name
 
 - name: Create new workspace
-  if: steps.check-workspace.outcome == 'failure'
+  if: steps.check-workspace-existence.outcome == 'failure'
   run: echo Creating new workspace...
 ```
 
