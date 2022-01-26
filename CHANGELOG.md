@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/compare/1.3.0...1.4.0) (2022-01-26)
+
+
+### Features
+
+* Use tfc-cli v1.0.0 ([937d8b4](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/commit/937d8b49587fc4875d7b3768410ca74599529419))
+
 # [1.3.0](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/compare/1.2.0...1.3.0) (2021-09-30)
 
 
