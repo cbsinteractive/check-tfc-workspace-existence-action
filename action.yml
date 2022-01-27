@@ -1,4 +1,4 @@
-name: Check TFC Workspace Existence Action
+name: Check Terraform Cloud Workspace Existence
 description: Determines whether a Terraform Cloud workspace exists
 inputs:
   tfcToken:
