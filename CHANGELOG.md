@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/compare/1.5.0...1.6.0) (2022-01-27)
+
+
+### Features
+
+* Rename action ([949b376](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/commit/949b3768d3a3db6c5969c6972533f8846e556dd4))
+
 # [1.5.0](https://github.com/cbsinteractive/check-tfc-workspace-existence-action/compare/1.4.0...1.5.0) (2022-01-27)
 
 
